@@ -11,6 +11,7 @@
 
 import java.awt.event.KeyEvent;
 import java.util.Random;
+import javax.swing.ImageIcon;
 
 public class GUIMock3GUI extends javax.swing.JFrame {
 
@@ -64,6 +65,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -194,7 +196,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,7 +215,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pixel_pet_dog_12.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/transparent dog resize.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -352,7 +354,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(29, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -454,20 +456,38 @@ public class GUIMock3GUI extends javax.swing.JFrame {
          switch(direction)
         {
             case KeyEvent.VK_UP:
-                jPanel7.setLocation(locationhor+0,locationver-10);
+                if (jPanel7.getLocation().y<=-300){
+                    jPanel7.setLocation(locationhor+0,locationver-0);
+                }else{
+                    jPanel7.setLocation(locationhor+0,locationver-10);
+                }
                 break;
                 
                 case KeyEvent.VK_DOWN:
-                jPanel7.setLocation(locationhor+0,locationver+10);
+                if (jPanel7.getLocation().y>=400){
+                    jPanel7.setLocation(locationhor+0,locationver+0);
+                }else{
+                   jPanel7.setLocation(locationhor+0,locationver+10); 
+                }
                 break;
                 
                 case KeyEvent.VK_RIGHT:
+                if (jPanel7.getLocation().x>=500){
+                jPanel7.setLocation(locationhor+0,locationver+0);   
+                }else{
                 jPanel7.setLocation(locationhor+10,locationver+0);
+                jLabel9.setIcon(new ImageIcon("D:\\Documents\\NetBeansProjects\\GUIMock3\\transparent dog flip.png"));
+                }
                 break;
                 
                 case KeyEvent.VK_LEFT:
+                if (jPanel7.getLocation().x<=-100){
+                    jPanel7.setLocation(locationhor+10,locationver+0);
+                }else{
                 jPanel7.setLocation(locationhor-10,locationver+0);
-                break;
+                jLabel9.setIcon(new ImageIcon("D:\\Documents\\NetBeansProjects\\GUIMock3\\src\\images\\transparent dog resize.png"));     
+                }
+                break; 
         }
     }//GEN-LAST:event_formKeyPressed
 
