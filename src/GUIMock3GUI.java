@@ -476,7 +476,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
                 jPanel7.setLocation(locationhor+0,locationver+0);   
                 }else{
                 jPanel7.setLocation(locationhor+10,locationver+0);
-                jLabel9.setIcon(new ImageIcon("D:\\Documents\\NetBeansProjects\\GUIMock3\\transparent dog flip.png"));
+                jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/transparent dog flip.png")));
                 }
                 break;
                 
@@ -485,7 +485,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
                     jPanel7.setLocation(locationhor+10,locationver+0);
                 }else{
                 jPanel7.setLocation(locationhor-10,locationver+0);
-                jLabel9.setIcon(new ImageIcon("D:\\Documents\\NetBeansProjects\\GUIMock3\\src\\images\\transparent dog resize.png"));     
+                jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/transparent dog resize.png")));     
                 }
                 break; 
         }
