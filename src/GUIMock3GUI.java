@@ -481,7 +481,7 @@ public class GUIMock3GUI extends javax.swing.JFrame {
                 break;
                 
                 case KeyEvent.VK_LEFT:
-                if (jPanel7.getLocation().x<=-100){
+                if (jPanel7.getLocation().x<=-350){
                     jPanel7.setLocation(locationhor+10,locationver+0);
                 }else{
                 jPanel7.setLocation(locationhor-10,locationver+0);
