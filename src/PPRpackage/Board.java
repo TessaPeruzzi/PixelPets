@@ -6,7 +6,7 @@
 package PPRpackage;
 
 import java.awt.Color;               //Java Programming Tutorials (Maze Game). YouTube. Accessed March 24, 2020. https://www.youtube.com/playlist?list=PLA38BD857DC0EE786.
-import java.awt.Graphics;           //This source was used to help learn how to create the maze game (Board.java,Container.java,Maze.java, and Player.java)
+import java.awt.Graphics;           //This source was used to help learn how to create the maze game (Board.java,Container.java,Maze.java, and Player.java
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
