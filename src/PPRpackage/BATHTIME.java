@@ -47,21 +47,33 @@ public class BATHTIME extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
+        jButton1.setBackground(new java.awt.Color(234, 189, 240));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jButton1.setText("Bring Pet!");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,8 +81,7 @@ public class BATHTIME extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BRUSH_2.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/brushresize.png"))); // NOI18N
         jLabel6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jLabel6MouseDragged(evt);
@@ -87,21 +98,126 @@ public class BATHTIME extends javax.swing.JFrame {
                 jLabel6MouseReleased(evt);
             }
         });
+        jLabel6.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentMoved(java.awt.event.ComponentEvent evt) {
+                jLabel6ComponentMoved(evt);
+            }
+        });
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/WATER_2.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/waterresize.png"))); // NOI18N
+        jLabel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel2MouseDragged(evt);
+            }
+        });
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel2MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jLabel2MouseReleased(evt);
+            }
+        });
 
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DEMOSOAP_2.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/soapresize.png"))); // NOI18N
+        jLabel5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel5MouseDragged(evt);
+            }
+        });
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel5MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jLabel5MouseReleased(evt);
+            }
+        });
 
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/TOWEL_2.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/towelresize.png"))); // NOI18N
+        jLabel3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel3MouseDragged(evt);
+            }
+        });
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel3MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jLabel3MouseReleased(evt);
+            }
+        });
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel4.setBackground(new java.awt.Color(234, 189, 240));
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel4.setText("Bath Time");
+
+        jPanel2.setBackground(new java.awt.Color(234, 189, 240));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(109, 0, 143)));
+
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel7.setText("Single click for instructions underneath pet");
+
+        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel8.setText("Double click items to interact with pet");
+
+        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel9.setText("Bath Instuctions:");
+
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel10.setText("Items can be dragged/moved");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(90, 90, 90))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(29, 29, 29))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(62, 62, 62))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel10)
+                .addGap(12, 12, 12)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -110,63 +226,85 @@ public class BATHTIME extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(jButton1))
+                        .addGap(371, 371, 371)
+                        .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2))))
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                        .addGap(38, 38, 38)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(jButton1)))
+                .addGap(45, 45, 45)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel5))
+                            .addComponent(jLabel6))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(85, 85, 85)
+                                .addComponent(jLabel2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(66, 66, 66)
+                                .addComponent(jLabel3))))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jButton1)
-                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel6)
-                            .addGap(96, 96, 96)
-                            .addComponent(jLabel5))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(jButton1)
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel6)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -177,21 +315,35 @@ public class BATHTIME extends javax.swing.JFrame {
         
         switch(PPRD.identifier){
                     case "dog":
-                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/transparent dog resize.png")));
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dirty dog.png")));
                         break;
                     case "guinea pig":
-                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PPRpackage/pixel_pet_guinea_pig_1_300x300.png")));
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dirty guinea pig.png")));
                         break;
                     case "cat":
-                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PPRpackage/pixel_pet_cat_7_350x350.png")));
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dirty cat.png")));
                         break;
                 }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+//Cleaning Brush Code
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
-        jTextArea1.setText("[Cleaning Brush]");
+        jTextArea1.setText("[Cleaning Brush]: Always brush first ;)");
+        if (evt.getClickCount() == 2){
+         switch(PPRD.identifier){
+            case "dog":
+                jTextArea1.setText("Your dog wags their tail in joy");
+                break;
+            case "cat":
+                jTextArea1.setText("Your cat begins to purr and raise their tail");
+                break;
+            case "guinea pig":    
+                jTextArea1.setText("Your guinea pig squeaks");
+                break;
+                }   
+        }
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseDragged
@@ -217,24 +369,230 @@ public class BATHTIME extends javax.swing.JFrame {
     private void jLabel6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseReleased
         // TODO add your handling code here:
         drag = false;
+        //jLabel6.setVisible(false);
     }//GEN-LAST:event_jLabel6MouseReleased
+    
+//Water Bucket Code
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        jTextArea1.setText("[Water Bucket]: Use before and after shampoo");
+        if (evt.getClickCount() == 2){
+            switch(PPRD.identifier){
+            case "dog":
+                jTextArea1.setText("Your dog sits and waits for while you pour water.");
+                break;
+            case "cat":
+                jTextArea1.setText("Your cat trys to escape and looks mad when they get wet.");
+                break;
+            case "guinea pig":    
+                jTextArea1.setText("Your guinea pig purrs every couple of seconds.");
+                break;
+                } 
+            switch(PPRD.identifier){
+                    case "dog":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dogwet.png")));
+                        break;
+                    case "guinea pig":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guineawet.png")));
+                        break;
+                    case "cat":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catwet.png")));
+                        break;
+                }
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
+        // TODO add your handling code here:
+        if (evt.getSource() == jLabel2){
+            drag = true;
+            Mousex = evt.getX();
+            Mousey = evt.getY();
+        }
+    }//GEN-LAST:event_jLabel2MousePressed
+
+    private void jLabel2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseReleased
+        // TODO add your handling code here:
+        drag = false;
+    }//GEN-LAST:event_jLabel2MouseReleased
+
+    private void jLabel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseDragged
+        // TODO add your handling code here:
+        if (evt.getSource() == jLabel2){
+            JComponent jc = (JComponent)evt.getSource();
+            jc.setLocation(jc.getX()+evt.getX()-Mousex, jc.getY()+evt.getY()-Mousey);
+            //Mousex = evt.getX();
+            //Mousey = evt.getY();
+            //jLabel6.setBounds(Mousex,Mousey,100,100);
+        }
+    }//GEN-LAST:event_jLabel2MouseDragged
+
+//Soap/Shampoo Code
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        jTextArea1.setText("[Shampoo]: Make sure to lather good but not too much");
+        if (evt.getClickCount() == 2){
+            switch(PPRD.identifier){
+            case "dog":
+                jTextArea1.setText("Your dog sits in silence waiting for this to be over.");
+                break;
+            case "cat":
+                jTextArea1.setText("Your cat looks more upset now.");
+                break;
+            case "guinea pig":    
+                jTextArea1.setText("Your guinea pig purrs and chatters their teeth.");
+                break;
+                } 
+            switch(PPRD.identifier){
+                    case "dog":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dogsoap.png")));
+                        break;
+                    case "guinea pig":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guineasoap.png")));
+                        break;
+                    case "cat":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catsoap.png")));
+                        break;
+                }
+        }
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MousePressed
+        // TODO add your handling code here:
+        if (evt.getSource() == jLabel2){
+            drag = true;
+            Mousex = evt.getX();
+            Mousey = evt.getY();
+        }
+    }//GEN-LAST:event_jLabel5MousePressed
+
+    private void jLabel5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseReleased
+        // TODO add your handling code here:
+        drag = false;
+    }//GEN-LAST:event_jLabel5MouseReleased
+
+    private void jLabel5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseDragged
+        // TODO add your handling code here:
+        if (evt.getSource() == jLabel5){
+            JComponent jc = (JComponent)evt.getSource();
+            jc.setLocation(jc.getX()+evt.getX()-Mousex, jc.getY()+evt.getY()-Mousey);
+            //Mousex = evt.getX();
+            //Mousey = evt.getY();
+            //jLabel6.setBounds(Mousex,Mousey,100,100);
+        }
+    }//GEN-LAST:event_jLabel5MouseDragged
+
+//Towel Code    
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        jTextArea1.setText("[Towel]: Dry well, not too rough!");
+        if (evt.getClickCount() == 2){
+            switch(PPRD.identifier){
+            case "dog":
+                jTextArea1.setText("Your dog shakes some water off.");
+                break;
+            case "cat":
+                jTextArea1.setText("Your cat looks much happier now!");
+                break;
+            case "guinea pig":    
+                jTextArea1.setText("Your guinea pig sits like a baby in the towel.");
+                break;
+                } 
+            switch(PPRD.identifier){
+                    case "dog":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/transparent dog resize.png")));
+                        break;
+                    case "guinea pig":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PPRpackage/pixel_pet_guinea_pig_1_300x300.png")));
+                        break;
+                    case "cat":
+                        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PPRpackage/pixel_pet_cat_7_350x350.png")));
+                        break;
+                }
+        }
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
+        // TODO add your handling code here:
+        if (evt.getSource() == jLabel2){
+            drag = true;
+            Mousex = evt.getX();
+            Mousey = evt.getY();
+        }
+    }//GEN-LAST:event_jLabel3MousePressed
+
+    private void jLabel3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseReleased
+        // TODO add your handling code here:
+        drag = false;
+    }//GEN-LAST:event_jLabel3MouseReleased
+
+    private void jLabel3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseDragged
+        // TODO add your handling code here:
+        if (evt.getSource() == jLabel3){
+            JComponent jc = (JComponent)evt.getSource();
+            jc.setLocation(jc.getX()+evt.getX()-Mousex, jc.getY()+evt.getY()-Mousey);
+            //Mousex = evt.getX();
+            //Mousey = evt.getY();
+            //jLabel6.setBounds(Mousex,Mousey,100,100);
+        }
+    }//GEN-LAST:event_jLabel3MouseDragged
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        //closing window update values
+         //set random variable
+        Random newr = new Random();
+        int newpercent = (newr.nextInt(18));
+       
+        
+        //set variables
+        GUIMock3GUI.totalxp += newpercent;
+        GUIMock3GUI.gameIdentifier = "bath";
+        
+        int newhealth = newr.nextInt(15) + 7;
+        GUIMock3GUI.health += newhealth;
+        
+        int newhapp = newr.nextInt(8);
+        GUIMock3GUI.happy -= newhapp;
+        
+        
+        //run setting function
+        GUIMock3GUI.endRun();
+    }//GEN-LAST:event_formWindowClosing
+
+//Brush Moved code
+    private void jLabel6ComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel6ComponentMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6ComponentMoved
 
     
     /**
      * @param args the command line arguments
      */
-    private void main(String args[]) {
+    public static void main(String args[]) {
         
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new BATHTIME().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     public javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

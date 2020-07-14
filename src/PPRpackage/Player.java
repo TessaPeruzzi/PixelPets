@@ -17,13 +17,34 @@ public class Player {
 private int xloc;
 private int yloc;
 private Image thePlayerImage;
-
         
 public Player(){
-xloc=0;
-yloc=0;
-ImageIcon image=new ImageIcon(getClass().getResource("/PPRpackage/dog sprite.png"));
-thePlayerImage=image.getImage();
+xloc=1;
+yloc=1;
+
+    switch (PPRD.identifier) {
+        case "dog":
+            {
+                ImageIcon image=new ImageIcon(getClass().getResource("/PPRpackage/dog sprite.png"));
+                thePlayerImage=image.getImage();
+                break;
+            }
+        case "cat":
+            {
+                ImageIcon image=new ImageIcon(getClass().getResource("/images/cat sprite.png"));
+                thePlayerImage=image.getImage();
+                break;
+            }
+        case "guinea pig":
+            {
+                ImageIcon image=new ImageIcon(getClass().getResource("/images/guinea pig sprite.png"));
+                thePlayerImage=image.getImage();
+                break;
+            }
+        default:
+            break;
+    }
+
 
 }    
 
@@ -42,4 +63,6 @@ public int getxloc(){
 public int getyloc(){
     return yloc;
 }
+
+
 }
