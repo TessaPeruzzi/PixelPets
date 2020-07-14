@@ -239,7 +239,7 @@ public class PPRD extends javax.swing.JFrame {
         newobj.jLabel12.setText("Your animal is a " + identifier);
         newobj.jLabel9.setIcon(GUIMock3GUI.dog); 
         newobj.jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dogbackground.png")));
-        newobj.jTextArea1.setText("Use the arrow keys to move your dog.");
+        newobj.jTextArea1.setText("Use the arrow keys to move your dog.\nClick on your dog to pet them.");
         newobj.jPanel7.setOpaque(false);
         newobj.jLabel1.setText(name);
         newobj.jPanel1.setBackground(new Color(7, 66, 15));
@@ -271,7 +271,7 @@ public class PPRD extends javax.swing.JFrame {
         newobj.jLabel9.setIcon(GUIMock3GUI.guinea); 
         newobj.jLabel1.setText(name);
         newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
-        newobj.jTextArea1.setText("Use the arrow keys to move your pet.");
+        newobj.jTextArea1.setText("Use the arrow keys to move your guinea pig.\nClick on your guinea pig to pet them.");
         newobj.jPanel7.setOpaque(false);
         newobj.jPanel1.setBackground(new Color(50, 0, 84));
         newobj.jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guineapigbackground.png"))); 
@@ -287,7 +287,7 @@ public class PPRD extends javax.swing.JFrame {
         newobj.jLabel9.setIcon(GUIMock3GUI.cat); 
         newobj.jLabel1.setText(name);
         newobj.jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catbackground.png")));
-        newobj.jTextArea1.setText("Use the arrow keys to move your cat.");
+        newobj.jTextArea1.setText("Use the arrow keys to move your cat.\nClick on your cat to pet them.");
         newobj.jPanel7.setOpaque(false);
         newobj.jPanel1.setBackground(new Color(7, 66, 15));
         newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
