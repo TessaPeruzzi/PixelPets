@@ -5,8 +5,8 @@
  */
 package PPRpackage;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.Color;               //Java Programming Tutorials (Maze Game). YouTube. Accessed March 24, 2020. https://www.youtube.com/playlist?list=PLA38BD857DC0EE786.
+import java.awt.Graphics;           //This source was used to help learn how to create the maze game (Board.java,Container.java,Maze.java, and Player.java
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -63,18 +63,18 @@ public class Board extends JPanel implements ActionListener {
         
         arr=themaze.getMaze();
   
-        for (int x=0;x<20;x++){
+        for (int x=0;x<20;x++){ //goes through each tile space of maze array
             for(int y=0;y<20;y++){
                 switch (arr[y][x]) {
-                    case 1:
+                    case 1: //Places bush image where a wall shoud be
                         g.drawImage(bush,x*50, y*50,null);
                         break;
-                    case 0:
+                    case 0: //Colors in a grey path
                         g.drawRect(x*50, y*50, 50,50);
                         g.setColor(new Color(224, 224, 224));
                         g.fillRect(x*50, y*50, 50, 50);
                         break;
-                    case 9:
+                    case 9: //Adds the correct pet treat at the end of the maze
                         g.drawRect(x*50, y*50, 50,50);
                         g.setColor(new Color(224, 224, 224));
                         g.fillRect(x*50, y*50, 50, 50);
@@ -84,7 +84,7 @@ public class Board extends JPanel implements ActionListener {
                 }
             }
         }
-g.drawImage(sprite.getImage(),sprite.getxloc()*50, sprite.getyloc()*50,null);
+g.drawImage(sprite.getImage(),sprite.getxloc()*50, sprite.getyloc()*50,null); //Insert character at beginning tile
 repaint();
     } 
 public Player getPlayer(){

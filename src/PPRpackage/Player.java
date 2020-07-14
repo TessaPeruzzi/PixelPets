@@ -19,7 +19,7 @@ private int yloc;
 private Image thePlayerImage;
         
 public Player(){
-xloc=1;
+xloc=1;  //Start at top left tile
 yloc=1;
 
     switch (PPRD.identifier) {

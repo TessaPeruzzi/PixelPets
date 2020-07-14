@@ -243,23 +243,23 @@ public class PPRD extends javax.swing.JFrame {
         newobj.jPanel7.setOpaque(false);
         newobj.jLabel1.setText(name);
         newobj.jPanel1.setBackground(new Color(7, 66, 15));
-         newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
-         newobj.jPanel6.setBackground(new Color(168, 225, 255));
-         newobj.jPanel2.setBackground(new Color(168, 225, 255));
-         newobj.jPanel8.setBackground(new Color(168, 225, 255));
-         newobj.jPanel9.setBackground(new Color(168, 225, 255));
-         newobj.jPanel10.setBackground(new Color(168, 225, 255));
-         newobj.jPanel3.setBackground(new Color(168, 255, 185));
-         newobj.jPanel5.setBackground(new Color(168, 255, 185));
-         newobj.jButton2.setBackground(new Color(168, 255, 185));
-          newobj.jButton3.setBackground(new Color(168, 255, 185));
-           newobj.jButton4.setBackground(new Color(168, 255, 185));
-            newobj.jButton5.setBackground(new Color(168, 255, 185));
+        newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
+        newobj.jPanel6.setBackground(new Color(168, 225, 255));
+        newobj.jPanel2.setBackground(new Color(168, 225, 255));
+        newobj.jPanel8.setBackground(new Color(168, 225, 255));
+        newobj.jPanel9.setBackground(new Color(168, 225, 255));
+        newobj.jPanel10.setBackground(new Color(168, 225, 255));
+        newobj.jPanel3.setBackground(new Color(168, 255, 185));
+        newobj.jPanel5.setBackground(new Color(168, 255, 185));
+        newobj.jButton2.setBackground(new Color(168, 255, 185));
+        newobj.jButton3.setBackground(new Color(168, 255, 185));
+        newobj.jButton4.setBackground(new Color(168, 255, 185));
+        newobj.jButton5.setBackground(new Color(168, 255, 185));
         newobj.jLabel12.setFont(new Font("Comic Sans MS",Font.PLAIN,12));
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
-
+//Sets up home screen based on what pet is chosen
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Guinea
         GUIMock3GUI newobj = new GUIMock3GUI();
@@ -268,7 +268,7 @@ public class PPRD extends javax.swing.JFrame {
         dispose();
         newobj.jLabel12.setText("Your animal is a " + identifier);
         newobj.jLabel12.setFont(new Font("Comic Sans MS",Font.PLAIN,12));
-       newobj.jLabel9.setIcon(GUIMock3GUI.guinea); 
+        newobj.jLabel9.setIcon(GUIMock3GUI.guinea); 
         newobj.jLabel1.setText(name);
         newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
         newobj.jTextArea1.setText("Use the arrow keys to move your pet.");
@@ -284,25 +284,25 @@ public class PPRD extends javax.swing.JFrame {
         setIdentifier("cat");
         dispose();
         newobj.jLabel12.setText("Your animal is a " + identifier);
-       newobj.jLabel9.setIcon(GUIMock3GUI.cat); 
+        newobj.jLabel9.setIcon(GUIMock3GUI.cat); 
         newobj.jLabel1.setText(name);
         newobj.jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catbackground.png")));
         newobj.jTextArea1.setText("Use the arrow keys to move your cat.");
         newobj.jPanel7.setOpaque(false);
         newobj.jPanel1.setBackground(new Color(7, 66, 15));
-         newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
-         newobj.jPanel6.setBackground(new Color(168, 225, 255));
-         newobj.jPanel2.setBackground(new Color(168, 225, 255));
-         newobj.jPanel8.setBackground(new Color(168, 225, 255));
-         newobj.jPanel9.setBackground(new Color(168, 225, 255));
-         newobj.jPanel10.setBackground(new Color(168, 225, 255));
-         newobj.jPanel3.setBackground(new Color(168, 255, 185));
-         newobj.jPanel5.setBackground(new Color(168, 255, 185));
-         newobj.jButton2.setBackground(new Color(168, 255, 185));
-          newobj.jButton3.setBackground(new Color(168, 255, 185));
-           newobj.jButton4.setBackground(new Color(168, 255, 185));
-            newobj.jButton5.setBackground(new Color(168, 255, 185));
-       newobj.jLabel12.setFont(new Font("Comic Sans MS",Font.PLAIN,12)); 
+        newobj.jLabel1.setFont(new Font("Comic Sans MS",Font.BOLD,24));
+        newobj.jPanel6.setBackground(new Color(168, 225, 255));
+        newobj.jPanel2.setBackground(new Color(168, 225, 255));
+        newobj.jPanel8.setBackground(new Color(168, 225, 255));
+        newobj.jPanel9.setBackground(new Color(168, 225, 255));
+        newobj.jPanel10.setBackground(new Color(168, 225, 255));
+        newobj.jPanel3.setBackground(new Color(168, 255, 185));
+        newobj.jPanel5.setBackground(new Color(168, 255, 185));
+        newobj.jButton2.setBackground(new Color(168, 255, 185));
+        newobj.jButton3.setBackground(new Color(168, 255, 185));
+        newobj.jButton4.setBackground(new Color(168, 255, 185));
+        newobj.jButton5.setBackground(new Color(168, 255, 185));
+        newobj.jLabel12.setFont(new Font("Comic Sans MS",Font.PLAIN,12)); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

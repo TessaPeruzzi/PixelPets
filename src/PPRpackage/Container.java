@@ -44,10 +44,10 @@ health=GUIMock3GUI.getHealth();
                 int keyCode=e.getKeyCode();
                 switch(keyCode){
                 case KeyEvent.VK_UP:
-                switch (theMaze.getMapVal(theMaze.getPlayer().getxloc(), theMaze.getPlayer().getyloc()-1)) {
-                    case 1:
-                        theMaze.getPlayer().move(0, 0);
-                        if(health-5>=0){
+                switch (theMaze.getMapVal(theMaze.getPlayer().getxloc(), theMaze.getPlayer().getyloc()-1)) { //Find array number of player location
+                    case 1: //1 indicates a wall
+                        theMaze.getPlayer().move(0, 0); //Since wall, do not move
+                        if(health-5>=0){ //Since a wall, lower health if they try to go into it
                         health=health-5;
                          }
                         GUIMock3GUI.jLabel5.setText(Integer.toString(health) + "/100");
@@ -55,10 +55,10 @@ health=GUIMock3GUI.getHealth();
                        
                         break;
                     case 0:
-                        theMaze.getPlayer().move(0, -1);
+                        theMaze.getPlayer().move(0, -1); //0 indicates a open path, so player moves in corresponding direction
                         break;
                     case 9:
-                        theFrame.dispose();
+                        theFrame.dispose(); //9 indicates the end of the maze, so the game closes
                         break;
                     default:
                         break;

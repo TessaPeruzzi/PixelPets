@@ -464,6 +464,8 @@ public class GUIMock3GUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.getAccessibleContext().setAccessibleDescription("");
+
         getContentPane().add(jPanel6);
         jPanel6.setBounds(0, 0, 1070, 110);
 
@@ -489,11 +491,11 @@ public class GUIMock3GUI extends javax.swing.JFrame {
     }
     
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-                  int direction = evt.getKeyCode();
+         int direction = evt.getKeyCode();            //Pet Movement
          int locationhor=jPanel7.getLocation().x;
          int locationver=jPanel7.getLocation().y;
         
-         switch(direction)
+         switch(direction) 
         {
             case KeyEvent.VK_UP:
                 if (jPanel7.getLocation().y<=-300){
@@ -571,10 +573,10 @@ public class GUIMock3GUI extends javax.swing.JFrame {
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
        javax.swing.Timer timer=new javax.swing.Timer(1000, new ActionListener() {
            @Override
-           public void actionPerformed(ActionEvent e) {
+           public void actionPerformed(ActionEvent e) {  //Changes icon to have hearts when pet is clicked
            switch(PPRD.identifier){
            case ("dog"):
-               if (jLabel9.getIcon()==dogheart){
+               if (jLabel9.getIcon()==dogheart){   
                   jLabel9.setIcon(dog); 
                }else{
                    jLabel9.setIcon(dogflip);
@@ -597,9 +599,6 @@ public class GUIMock3GUI extends javax.swing.JFrame {
        }    
            }
        });
-        
-        
-        
         
         if (happy+5<=100){
            happy=happy+5;

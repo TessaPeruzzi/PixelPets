@@ -7,8 +7,8 @@ package PPRpackage;
  */
 
 
-import PPRpackage.GUIMock3GUI;
-import PPRpackage.PPRD;
+import PPRpackage.GUIMock3GUI;   //“Download Free Png Tennis Ball PNG Image, Download PNG Image with ... .” DLPNG, 2018, dlpng.com/png/6560212.
+import PPRpackage.PPRD;           //Tennis Ball Image Source
 import java.awt.event.KeyEvent;
 import java.util.Random;
 
